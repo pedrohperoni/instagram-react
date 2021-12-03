@@ -8,7 +8,7 @@ import {
 
 export function Post(props){
    return(
-      <div class="post" id={props.id}>
+      <div class="post" key={props.id}>
               <div class="topo">
                 <div class="usuario">
                 <img src={require(`../assets/img/${props.userImg}.svg`).default} alt={props.title} />

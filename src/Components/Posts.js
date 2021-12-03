@@ -1,5 +1,5 @@
 import { Post } from "./Post";
-import { postConstants }from "../Constants/postConstants"
+import { postConstants } from "../Constants/postConstants"
 
 export default function Posts(){
    return(
@@ -7,7 +7,7 @@ export default function Posts(){
       <div class="posts">
          {postConstants.map(postConstant => 
             <Post
-               id={postConstant.id}
+               key={postConstant.id}
                title={postConstant.title} 
                userImg={postConstant.userImg}
                contentImg={postConstant.contentImg}   

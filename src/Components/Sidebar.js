@@ -1,88 +1,33 @@
+import { sidebarSuggestionsConstants } from "../Constants/sidebarSuggestionConstants"
+import SidebarSuggestion from "./SidebarSuggestion"
+import SidebarUser from "./SidebarUser"
+
 export default function Sidebar(){
    return(
-      <div class="sidebar">
-          <div class="usuario">
-            <img src="assets/img/catanacomics.svg" />
-            <div class="texto">
-              <strong>catanacomics</strong>
-              Catana
-            </div>
-          </div>
-
-          <div class="sugestoes">
-            <div class="titulo">
+      <div className="sidebar">
+         <SidebarUser user={"catanacomics"} nickname="Catana" />
+          <div className="sugestoes">
+            <div className="titulo">
               Sugestões para você
               <div>Ver tudo</div>
             </div>
 
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/bad.vibes.memes.svg" />
-                <div class="texto">
-                  <div class="nome">bad.vibes.memes</div>
-                  <div class="razao">Segue você</div>
-                </div>
-              </div>
+            {sidebarSuggestionsConstants.map(sidebarSuggestionsConstant =>
+               <SidebarSuggestion
+                  key={sidebarSuggestionsConstant.id}
+                  user={sidebarSuggestionsConstant.user}
+                  reason={sidebarSuggestionsConstant.reason}
+               />
+            )}
 
-              <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/chibirdart.svg" />
-                <div class="texto">
-                  <div class="nome">chibirdart</div>
-                  <div class="razao">Segue você</div>
-                </div>
-              </div>
-
-              <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/razoesparaacreditar.svg" />
-                <div class="texto">
-                  <div class="nome">razoesparaacreditar</div>
-                  <div class="razao">Novo no Instagram</div>
-                </div>
-              </div>
-
-              <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/adorable_animals.svg" />
-                <div class="texto">
-                  <div class="nome">adorable_animals</div>
-                  <div class="razao">Segue você</div>
-                </div>
-              </div>
-
-              <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/smallcutecats.svg" />
-                <div class="texto">
-                  <div class="nome">smallcutecats</div>
-                  <div class="razao">Segue você</div>
-                </div>
-              </div>
-
-              <div class="seguir">Seguir</div>
-            </div>
-          </div>
-
-          <div class="links">
+          <div className="links">
             Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
           </div>
 
-          <div class="copyright">
+          <div className="copyright">
             © 2021 INSTAGRAM DO FACEBOOK
           </div>
         </div>
+      </div>
    )
 }

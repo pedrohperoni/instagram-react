@@ -8,7 +8,7 @@ function Header(){
           <div className="logo">
             <IoLogoInstagram />
             <div className="separador"></div>
-            <img src={logo} />
+            <img src={logo} alt="logo"/>
           </div>
 
           <div className="logo-mobile">
@@ -16,7 +16,7 @@ function Header(){
           </div>
 
           <div className="instagram-mobile">
-            <img src={logo} />
+            <img src={logo} alt="logo" />
           </div>
   
           <div className="pesquisa">
