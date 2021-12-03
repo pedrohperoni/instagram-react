@@ -1,10 +1,10 @@
 export default function Story(props){
    return(
-      <div class="story" key={props.id}>
-         <div class="imagem">
+      <div className="story" key={props.id}>
+         <div className="imagem">
          <img src={require(`../assets/img/${props.user}.svg`).default} alt={props.user} />
          </div>
-         <div class="usuario">
+         <div className="usuario">
          {props.user}
          </div>
     </div>

@@ -2,7 +2,7 @@ import {IoHome, IoSearchOutline, IoAddCircleOutline, IoHeartOutline, IoPersonOut
 
 export default function Footer(){
    return(
-      <div class="fundo-mobile">
+      <div className="fundo-mobile">
         <IoHome />
         <IoSearchOutline />
         <IoAddCircleOutline />

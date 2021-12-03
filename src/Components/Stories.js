@@ -4,14 +4,14 @@ import Story from "./Story"
 
 export default function Stories(){
    return(
-      <div class="stories">
+      <div className="stories">
          {storyConstants.map(storyConstant => 
          <Story 
             key={storyConstant.id}
             user={storyConstant.user}
          />
          )}
-         <div class="setinha">
+         <div className="setinha">
             <IoChevronForwardCircle />
          </div>
       </div>

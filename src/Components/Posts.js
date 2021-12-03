@@ -4,7 +4,7 @@ import { postConstants } from "../Constants/postConstants"
 export default function Posts(){
    return(
 
-      <div class="posts">
+      <div className="posts">
          {postConstants.map(postConstant => 
             <Post
                key={postConstant.id}

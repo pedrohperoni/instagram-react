@@ -8,23 +8,23 @@ import {
 
 export function Post(props){
    return(
-      <div class="post" key={props.id}>
-              <div class="topo">
-                <div class="usuario">
+      <div className="post" key={props.id}>
+              <div className="topo">
+                <div className="usuario">
                 <img src={require(`../assets/img/${props.userImg}.svg`).default} alt={props.title} />
                   {props.title}
                 </div>
-                <div class="acoes">
+                <div className="acoes">
                   <IoEllipsisHorizontal />
                 </div>
               </div>
 
-              <div class="conteudo">
+              <div className="conteudo">
                 <img src={require(`../assets/img/${props.contentImg}.svg`).default} alt={props.contentImg} />
               </div>
 
-              <div class="fundo">
-                <div class="acoes">
+              <div className="fundo">
+                <div className="acoes">
                   <div>
                   <IoHeartOutline />
                   <IoChatbubbleOutline />
@@ -35,9 +35,9 @@ export function Post(props){
                   </div>
                 </div>
 
-                <div class="curtidas">
+                <div className="curtidas">
                 <img src={require(`../assets/img/${props.likeImg}.svg`).default} alt={props.likeImg} />
-                  <div class="texto">
+                  <div className="texto">
                     Curtido por <strong>{props.likeImg}</strong> e <strong>outras {props.likes} pessoas</strong>
                   </div>
                 </div>
